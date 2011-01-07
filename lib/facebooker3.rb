@@ -1,4 +1,5 @@
 module Facebooker3
+  FACEBOOK_BASE_URL = "http://apps.facebook.com/"
   @facebooker3_configuration = {}
   @raw_facebooker3_configuration = {}
 
@@ -20,6 +21,8 @@ module Facebooker3
       ENV['FACEBOOK_API_KEY']             = config['api_key']
       ENV['FACEBOOK_SECRET_KEY']          = config['secret_key']
       ENV['FACEBOOK_RELATIVE_ROOT_URL']   = config['canvas_page_name']
+      ENV['FACEBOOK_APP_URL']             = FACEBOOK_BASE_URL + ENV['FACEBOOK_RELATIVE_ROOT_URL'] + "/"
+      ENV['GRAPH_URL']                    = "https://graph.facebook.com/"
 
       @facebooker3_configuration = config
       facebooker3_config
@@ -31,13 +34,15 @@ module Facebooker3
   end
 end
 
+require 'oauth2'
 require 'facebooker3/logging'
 require 'facebooker3/signed_request'
 require 'facebooker3/core_ext'
+require "facebooker3/routing"
 
-%w{ models controllers helpers }.each do |dir|
-  path = File.join(File.dirname(__FILE__), 'app', dir)
-  $LOAD_PATH << path
-  ActiveSupport::Dependencies.autoload_paths << path
-  ActiveSupport::Dependencies.autoload_once_paths.delete(path)
-end
+#%w{ models controllers helpers }.each do |dir|
+#  path = File.join(File.dirname(__FILE__), 'app', dir)
+#  $LOAD_PATH << path
+#  ActiveSupport::Dependencies.autoload_paths << path
+#  ActiveSupport::Dependencies.autoload_once_paths.delete(path)
+#end

@@ -1,0 +1,9 @@
+<% if @reauthorize %>
+  <p>You need to authorize the app to access some of your details for it to work. Please click the following link to authorize.</p>
+  <p><%= link_to_function "Authorize", "#{raw authorization_redirection_js}" %></p>
+<% else %>
+  <p>Please wait while we redirect you for authorization. </p>
+  <script type ="text/javascript">
+    <%= raw authorization_redirection_js %>
+  </script>
+<% end %>

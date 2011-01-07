@@ -1,0 +1,22 @@
+# canvas_page_name is the canvas page relative root url.
+# Eg:
+#     For an app with canvas url "http://apps.facebook.com/rails-plugin/", the
+#     canvas_page_name will be "rails-plugin"
+
+development:
+  app_id: "158887830824939"
+  api_key: "12a473b313b2b50b369417fbe6582004"
+  secret_key: "56dd2e428c93fd39ef3012ef8af9a840"
+  canvas_page_name: "rails-plugin"
+
+test:
+  app_id: "158887830824939"
+  api_key: "12a473b313b2b50b369417fbe6582004"
+  secret_key: "56dd2e428c93fd39ef3012ef8af9a840"
+  canvas_page_name: "rails-plugin"
+
+production:
+  app_id: "158887830824939"
+  api_key: "12a473b313b2b50b369417fbe6582004"
+  secret_key: "56dd2e428c93fd39ef3012ef8af9a840"
+  canvas_page_name: "rails-plugin"

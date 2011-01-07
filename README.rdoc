@@ -17,7 +17,7 @@ to
 
 Copy /vendor/plugins/facebooker3/sample_files/facebooker3.yml to /config folder and update /config/facebooker3.yml with your app settings.
 
-== Licence
+== License
 
 Copyright (c) 2011 [Satyaram B V], released under the MIT license
 

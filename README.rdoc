@@ -8,6 +8,10 @@ Facebooker3 can be installed as a plugin by:
 
   rails plugin install git@github.com:bvsatyaram/facebooker3.git
 
+Facebooker3 can be installed as a gem by:
+
+  sudo gem install facebooker3
+
 == Setup
 
 In /app/controllers/application_controller, change
